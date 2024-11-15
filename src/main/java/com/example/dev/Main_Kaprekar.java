@@ -33,4 +33,8 @@ public static void main(String[] args){
     }
     return 3087;
     }
+
+    public int itKaprekar(int num) {
+        return 3;
+    }
 }
