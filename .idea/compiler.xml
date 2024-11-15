@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="t4tdd" />
+        <module name="TDD_Kaprekar" />
         <module name="0714_TDD_Fibo" />
         <module name="TDD_Fibo" />
       </profile>
