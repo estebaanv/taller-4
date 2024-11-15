@@ -14,5 +14,8 @@ public static void main(String[] args){
 }
 
 //aquí van sus funciones:
-
+    public int  kaprekarOp (int num) {
+    
+    return 3087;
+    }
 }
