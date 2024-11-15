@@ -37,23 +37,21 @@ public static void main(String[] args){
     }
 
     public int itKaprekar(int num) {
-        int mayor = 0;
-        int menor = 0;
-        int resultado = 0;
+        int mayor, menor, resultado;
         int iteraciones = 0;
+
         while (num != 6174) {
-            String numString = String.valueOf(num);
+            String numString = String.format("%04d", num);
             List<Integer> lista = new ArrayList<>();
-            for (int i = 0; i < numString.length(); i++) {
-                lista.add(Integer.parseInt(String.valueOf(numString.charAt(i))));
+            for (char c : numString.toCharArray()) {
+                lista.add(Character.getNumericValue(c));
             }
             Collections.sort(lista);
-            mayor = Integer.parseInt(String.valueOf(lista.get(3)) + String.valueOf(lista.get(2)) + String.valueOf(lista.get(1)) + String.valueOf(lista.get(0)));
-            menor = Integer.parseInt(String.valueOf(lista.get(0)) + String.valueOf(lista.get(1)) + String.valueOf(lista.get(2)) + String.valueOf(lista.get(3)));
+            mayor = lista.get(3) * 1000 + lista.get(2) * 100 + lista.get(1) * 10 + lista.get(0);
+            menor = lista.get(0) * 1000 + lista.get(1) * 100 + lista.get(2) * 10 + lista.get(3);
             resultado = mayor - menor;
             num = resultado;
             iteraciones++;
-
         }
         return iteraciones;
     }
